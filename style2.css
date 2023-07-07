@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding:0;
+   box-sizing: border-box;
+   font-family: 'popins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #090909;
+}
+.box{
+    height: 500px;
+    width: 380px;
+    background-color:#191c29;
+    border-radius: 8px;
+    position:relative;
+     overflow: hidden; 
+    }
+    
+.box::before{ 
+    content:"";
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg, transparent,
+    transparent, #1bd9e7d5, #1bd9e7d5, #1bd9e7d5);
+    z-index:1;
+     transform-origin: bottom right; 
+    animation: animate 6s linear infinite;
+ } 
+
+.box::after{
+    content:"";
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg, transparent,
+    transparent, #1bd9e7d5, #1bd9e7d5, #1bd9e7d5);
+    z-index:1;
+     transform-origin: bottom right; 
+    animation:  animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderline{
+    position: absolute;
+    top:0;
+   inset: 0;
+
+}
+.borderline::before{
+    content:"";
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg, transparent,
+    transparent, #f42db8f2, #f42db8f2, #f42db8f2);
+    z-index:1;
+     transform-origin: bottom right; 
+    animation:  animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderline::after{
+    content:"";
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg, transparent,
+    transparent, #f42db8f2, #f42db8f2, #f42db8f2);
+    z-index:1;
+     transform-origin: bottom right; 
+    animation: animate  6s linear infinite;
+    animation-delay: -4.5s;
+} 
+
+.box form{ 
+    position: absolute;
+    inset: 4px;
+    padding:50px 40px;
+    background:#222;
+    border-radius: 8px;
+    z-index:2;
+    display:flex;
+    flex-direction: column;
+}
+
+
+img{ 
+    margin-top: -15px;
+    margin-left: 40%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+
+} 
+span.sign-in{
+    
+color: #fff;
+    font-size:20pt;
+    font-weight: bold;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.input-box{
+    padding:12px 35px;
+ outline: none;
+border-color: #f5cc23;
+ border-radius:50px;
+ margin-top: 20px;   
+ margin-bottom: -5px;
+ background-color:transparent;
+ color: white;
+
+}
+.input-box1{
+  padding:12px 35px;
+ outline: none;
+border-color: #f5cc23;
+ border-radius:50px;
+ margin-top: 15px;   
+ margin-bottom: 3px;
+ background-color:transparent;
+ color: white;
+}
+
+span.line{
+    color:rgba(245, 186, 97, 0.9);
+    font-size: 12pt;
+    font-family: Arial;   
+}
+
+
+.user{
+    padding:10px 40px;
+    padding-right: 50px;
+ outline: none;
+border-color:blue;
+ border-radius:10px;
+ margin-top: 15px;   
+ margin-bottom: -5px;
+ background-color:transparent;
+ color:dimgray;
+ justify-content: left;
+}
+
+              @keyframes animate {
+     0%{
+        transform:rotate(0deg);
+     }
+     100%{
+        transform:rotate(360deg);
+     }
+        
+    }
+    
+input.btn{
+padding:10px 40px;
+ outline: none;
+border-color: blue;
+ border-radius:50px;
+ margin-top: 15px;   
+ margin-bottom: -5px;
+ background-color:transparent;
+ color: white;
+ font-size: 10pt; 
+}
+input.btn-1{
+padding:10px 40px;
+ outline: none;
+border-color: #1711dd;
+ border-radius:50px;
+ margin-top: 15px;   
+ margin-bottom: -5px;
+ background-color:blue;
+ color:black;
+ font-size: 10pt; 
+}  
+p{
+    margin-top: 20px;
+    color: #fff;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color:blue;
+    font-size: 12pt;    
+}
+
+@media screen and (max-width:800px){
+    
+.box{
+    max-width:800px;
+    max-width:400px ;
+    max-height: 500px;
+}
+}
+  
+ 
